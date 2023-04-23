@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <div class="overlay-new" style="display: none">
+      <div class="new-todo">
+        <div class="nav-new-todo">
+          <h1>Add a new Taks</h1>
+          <button class="close-new-todo">X</button>
+        </div>
+        <div class="content-new-todo">
+          <textarea
+            name="title"
+            id="todo-title"
+            cols="30"
+            rows="1s"
+            placeholder="Title: Do laundry"
+            required=""
+          ></textarea>
+          <textarea
+            name="description"
+            id="todo-description"
+            cols="30"
+            rows="5"
+          ></textarea>
+          <button class="submit-todo">Submit</button>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <nav>
+        <h3>Projects</h3>
+        <div class="projects">
+          <div class="project">Default</div>
+        </div>
+        <div class="btnContainer">
+          <button class="newBTN">Add Project</button>
+        </div>
+      </nav>
+      <main class="elements">
+        <div class="taskList"></div>
+        <button class="newTDbtn">New Task</button>
+      </main>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
