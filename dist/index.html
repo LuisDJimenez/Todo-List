@@ -10,13 +10,13 @@
     <div class="overlay-new" style="display: none">
       <div class="new-todo">
         <div class="nav-new-todo">
-          <h1>Add a new Taks</h1>
+          <h1>Add a new Project</h1>
           <button class="close-new-todo">X</button>
         </div>
         <div class="content-new-todo">
           <textarea
             name="title"
-            id="todo-title"
+            id="taskTitle"
             cols="30"
             rows="1s"
             placeholder="Title: Do laundry"
@@ -24,7 +24,7 @@
           ></textarea>
           <textarea
             name="description"
-            id="todo-description"
+            id="taskDescription"
             cols="30"
             rows="5"
           ></textarea>
@@ -39,11 +39,16 @@
           <div class="project">Default</div>
         </div>
         <div class="btnContainer">
-          <button class="newBTN">Add Project</button>
+          <button class="newProjBTN">Add Project</button>
         </div>
       </nav>
       <main class="elements">
         <div class="taskList"></div>
+        <div class="taskForm" style="display: none">
+          <input type="text" placeholder="Title" id="todoTitle" />
+          <button class="todoSubmit">Add</button>
+          <button class="todoCancel">Cancel</button>
+        </div>
         <button class="newTDbtn">New Task</button>
       </main>
     </div>

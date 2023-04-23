@@ -2,6 +2,8 @@ import "./style.css";
 
 const taskList = document.querySelector(".taskList");
 const overlayNew = document.querySelector(".overlay-new");
+const taskForm = document.querySelector(".taskForm");
+const newTaskBTN = document.querySelector(".newTDbtn");
 
 const todosList = [];
 
@@ -16,24 +18,26 @@ function listenClicks() {
     const { target } = event;
 
     if (target.classList.contains("newTDbtn")) {
-      overlayNew.style.display = "flex";
+      taskForm.style.display = "flex";
+      newTaskBTN.style.display = "none";
     } else if (target.classList.contains("close-new-todo")) {
       overlayNew.style.display = "none";
-    } else if (target.classList.contains("submit-todo")) {
+    } else if (target.classList.contains("todoSubmit")) {
       check();
+    } else if (target.classList.contains("newProjBTN")) {
+      overlayNew.style.display = "flex";
     }
   });
 }
 
 function check() {
-  const title = document.getElementById("todo-title");
-  const descrip = document.getElementById("todo-description");
+  const title = document.getElementById("todoTitle");
 
-  if (title.value != "" && descrip.value != "") {
+  if (title.value != "") {
     addTodoToList(title.value);
-    overlayNew.style.display = "none";
+    taskForm.style.display = "none";
     title.value = "";
-    descrip.value = "";
+    newTaskBTN.style.display = "flex";
   }
 }
 
